@@ -1,0 +1,105 @@
+import "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDocker,
+  faPython,
+  faBitcoin,
+} from "@fortawesome/free-brands-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import Chip from "@mui/material/Chip";
+import "../assets/styles/Expertise.scss";
+
+const labelsFirst = [
+  "C",
+  "JavaScript",
+  "HTML5",
+  "CSS3",
+  "Golang",
+  "FastAPI",
+  "Python",
+  "SQL",
+  "Tensorflow",
+  "Postman",
+];
+
+const labelsSecond = [
+  "Bitcoin",
+  "Ethereum",
+  "Solidity",
+  "Viper",
+  "Foundry",
+  "Metamask",
+  "Andromeda",
+];
+
+const labelsThird = [
+  "OpenAI",
+  "Groq",
+  "LangChain",
+  "Qdrant",
+  "Hugging Face",
+  "LlamaIndex",
+  "Streamlit",
+];
+
+function Expertise() {
+  return (
+    <div className="container" id="expertise">
+      <div className="skills-container">
+        <h1>Expertise</h1>
+        <div className="skills-grid">
+          <div className="skill">
+            <FontAwesomeIcon icon={faCode} size="3x" />
+            <h3>Software Development</h3>
+            <p>
+              I have built a diverse array of applications from scratch using
+              modern technologies such as Tensorflow and FastAPI. I have a
+              strong proficiency in the SDLC process and frontend + backend
+              development.
+            </p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {labelsFirst.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
+            </div>
+          </div>
+
+          <div className="skill">
+            <FontAwesomeIcon icon={faBitcoin} size="3x" />
+            <h3>Blockchain Development</h3>
+            <p>
+              I have a strong expertise in building new and innovative
+              decentralized solutions using Ethereum and Solidity.
+            </p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {labelsSecond.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
+            </div>
+          </div>
+
+          <div className="skill">
+            <FontAwesomeIcon icon={faPython} size="3x" />
+            <h3>GenAI & LLM</h3>
+            <p>
+              Stay relevant in the market by leveraging the latest AI models in
+              your projects. I have professional experience building enterprise
+              grade GenAI-enabled solutions to empower intelligent decision
+              making.
+            </p>
+            <div className="flex-chips">
+              <span className="chip-title">Tech stack:</span>
+              {labelsThird.map((label, index) => (
+                <Chip key={index} className="chip" label={label} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Expertise;
