@@ -1,10 +1,6 @@
 import "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faDocker,
-  faPython,
-  faBitcoin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faPython, faBitcoin } from "@fortawesome/free-brands-svg-icons";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
